@@ -6,13 +6,19 @@
     <title>La Bàn Khắc Kỷ: Bốn Mùa An Nhiên - Khám Phá Triết Lý Khắc Kỷ</title>
     <meta name="description" content="Khám phá triết lý Chủ nghĩa Khắc Kỷ qua hành trình bốn mùa, rèn luyện Trí Tuệ, Can Đảm, Công Bằng và Tiết Độ trong sự nghiệp, mối quan hệ, phát triển bản thân và đóng góp xã hội.">
     <meta name="keywords" content="Chủ nghĩa Khắc Kỷ, triết lý sống, Trí Tuệ, Can Đảm, Công Bằng, Tiết Độ, phát triển bản thân, bình an, minh triết, cuộc sống ý nghĩa, Stoicism, La Bàn Khắc Kỷ">
-    <link rel="canonical" href="https://yourusername.github.io/your-repo-name/"> <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/your-repo-name/"> <meta property="og:title" content="La Bàn Khắc Kỷ: Bốn Mùa An Nhiên - Khám Phá Triết Lý Khắc Kỷ">
+    <link rel="canonical" href="https://yourusername.github.io/your-repo-name/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/your-repo-name/">
+    <meta property="og:title" content="La Bàn Khắc Kỷ: Bốn Mùa An Nhiên - Khám Phá Triết Lý Khắc Kỷ">
     <meta property="og:description" content="Khám phá triết lý Chủ nghĩa Khắc Kỷ qua hành trình bốn mùa, rèn luyện Trí Tuệ, Can Đảm, Công Bằng và Tiết Độ trong sự nghiệp, mối quan hệ, phát triển bản thân và đóng góp xã hội.">
-    <meta property="og:image" content="https://placehold.co/1200x630/E0E0E0/333333?text=La+Ban+Khac+Ky"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourusername.github.io/your-repo-name/"> <meta property="twitter:title" content="La Bàn Khắc Kỷ: Bốn Mùa An Nhiên - Khám Phá Triết Lý Khắc Kỷ">
+    <meta property="og:image" content="https://placehold.co/1200x630/E0E0E0/333333?text=La+Ban+Khac+Ky">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/your-repo-name/">
+    <meta property="twitter:title" content="La Bàn Khắc Kỷ: Bốn Mùa An Nhiên - Khám Phá Triết Lý Khắc Kỷ">
     <meta property="twitter:description" content="Khám phá triết lý Chủ nghĩa Khắc Kỷ qua hành trình bốn mùa, rèn luyện Trí Tuệ, Can Đảm, Công Bằng và Tiết Độ trong sự nghiệp, mối quan hệ, phát triển bản thân và đóng góp xã hội.">
-    <meta property="twitter:image" content="https://placehold.co/1200x630/E0E0E0/333333?text=La+Ban+Khac+Ky"> <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="twitter:image" content="https://placehold.co/1200x630/E0E0E0/333333?text=La+Ban+Khac+Ky">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Visualization & Content Choices:
         - Introduction: Text blocks. Goal: Inform. Interaction: Scroll. Justification: Standard.
         - Four Virtues (Main Navigation): Clickable cards/buttons representing each virtue/season. Goal: Organize, Navigate. Interaction: Click to show virtue content. Justification: Clear entry points to core content.
@@ -25,14 +31,14 @@
         - No Chart.js/Plotly.js needed as the source is primarily textual. Visual structure and icons will be HTML/CSS/Unicode. CONFIRMING NO SVG/Mermaid. -->
     <style>
         body {
-            font-family: 'Inter', sans-serif; /* Assuming Inter is a preferred font, fallback to sans-serif */
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            letter-spacing: 0.01em;
         }
         .tab-button.active {
             border-bottom-width: 2px;
-            --tw-border-opacity: 1;
-            border-color: rgb(5 150 105 / var(--tw-border-opacity)); /* emerald-600 */
-            --tw-text-opacity: 1;
-            color: rgb(5 150 105 / var(--tw-text-opacity)); /* emerald-600 */
+            border-color: #047857; /* emerald-700 */
+            color: #047857; /* emerald-700 */
             font-weight: 600;
         }
         .content-section {
@@ -42,7 +48,7 @@
             display: block;
         }
         .aspect-tab-button.active {
-            background-color: rgb(20 83 45 / var(--tw-bg-opacity)); /* emerald-800 */
+            background-color: #065f46; /* emerald-800 */
             color: white;
         }
         .exercise-content {
@@ -63,24 +69,27 @@
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
         }
         /* Seasonal accent colors */
-        .spring-accent { border-left-color: #4ade80; /* green-400 */ }
-        .summer-accent { border-left-color: #facc15; /* yellow-400 */ }
+        .spring-accent { border-left-color: #34d399; /* emerald-400 */ }
+        .summer-accent { border-left-color: #fcd34d; /* amber-400 */ }
         .autumn-accent { border-left-color: #fb923c; /* orange-400 */ }
         .winter-accent { border-left-color: #60a5fa; /* blue-400 */ }
 
-        .spring-bg { background-color: #f0fdf4; } /* green-50 */
-        .summer-bg { background-color: #fefce8; } /* yellow-50 */
+        .spring-bg { background-color: #ecfdf5; } /* emerald-50 */
+        .summer-bg { background-color: #fffbeb; } /* amber-50 */
         .autumn-bg { background-color: #fff7ed; } /* orange-50 */
         .winter-bg { background-color: #eff6ff; } /* blue-50 */
 
-        .spring-text { color: #15803d; } /* green-700 */
-        .summer-text { color: #ca8a04; } /* yellow-700 */
+        .spring-text { color: #065f46; } /* emerald-800 */
+        .summer-text { color: #b45309; } /* amber-800 */
         .autumn-text { color: #c2410c; } /* orange-700 */
-        .winter-text { color: #1d4ed8; } /* blue-700 */
+        .winter-text { color: #1e40af; } /* blue-800 */
 
         .nav-link.active {
             font-weight: bold;
-            color: rgb(5 150 105); /* emerald-600 */
+            color: #047857; /* emerald-700 */
+        }
+        h1, h2, h3, h4 {
+            font-weight: 700; /* Bold for headings */
         }
     </style>
     <script type="application/ld+json">
@@ -104,19 +113,20 @@
           "@type": "ImageObject",
           "url": "https://placehold.co/600x60/E0E0E0/333333?text=Logo" }
       },
-      "datePublished": "2024-05-23", "dateModified": "2024-05-23" }
+      "datePublished": "2024-05-23",
+      "dateModified": "2024-05-23" }
     </script>
 </head>
 <body class="bg-stone-100 text-stone-800 leading-relaxed">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-emerald-700">La Bàn Khắc Kỷ</h1>
+            <h1 class="text-2xl font-bold text-emerald-800">La Bàn Khắc Kỷ</h1>
             <div class="space-x-4">
-                <a href="#gioi-thieu" class="nav-link text-stone-700 hover:text-emerald-600">Giới Thiệu</a>
-                <a href="#bon-duc-hanh" class="nav-link text-stone-700 hover:text-emerald-600">Bốn Đức Hạnh</a>
-                <a href="#loi-ket" class="nav-link text-stone-700 hover:text-emerald-600">Lời Kết</a>
-                <a href="#phu-luc" class="nav-link text-stone-700 hover:text-emerald-600">Phụ Lục</a>
+                <a href="#gioi-thieu" class="nav-link text-stone-700 hover:text-emerald-700">Giới Thiệu</a>
+                <a href="#bon-duc-hanh" class="nav-link text-stone-700 hover:text-emerald-700">Bốn Đức Hạnh</a>
+                <a href="#loi-ket" class="nav-link text-stone-700 hover:text-emerald-700">Lời Kết</a>
+                <a href="#phu-luc" class="nav-link text-stone-700 hover:text-emerald-700">Phụ Lục</a>
             </div>
         </nav>
     </header>
@@ -125,7 +135,7 @@
 
         <section id="gioi-thieu" class="content-section active pt-16 -mt-16 mb-12">
             <div class="bg-white p-8 rounded-lg shadow-lg">
-                <h2 class="text-3xl font-bold text-emerald-700 mb-6">Lời Mở Đầu: Gieo Hạt Bình An</h2>
+                <h2 class="text-3xl font-bold text-emerald-800 mb-6">Lời Mở Đầu: Gieo Hạt Bình An</h2>
                 <p class="mb-4">Chào mừng bạn đến với hành trình khám phá Chủ nghĩa Khắc Kỷ - một triết lý sống đã được thử thách qua thời gian, mang lại sự bình an và minh triết cho vô số người. Trong thế giới hiện đại đầy biến động và bất định, những nguyên tắc cốt lõi của Chủ nghĩa Khắc Kỷ trở nên cần thiết hơn bao giờ hết, giúp chúng ta tìm thấy sự vững chãi nội tâm và định hướng cuộc sống một cách ý nghĩa.</p>
                 <p class="mb-4">Cuốn sách này (và ứng dụng web này) được thiết kế như một la bàn, dẫn dắt bạn qua bốn mùa, mỗi mùa tương ứng với một đức hạnh trụ cột của Chủ nghĩa Khắc Kỷ:</p>
                 <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
@@ -146,7 +156,7 @@
         </section>
 
         <section id="bon-duc-hanh" class="content-section pt-16 -mt-16 mb-12">
-            <h2 class="text-3xl font-bold text-emerald-700 mb-8 text-center">Bốn Mùa Đức Hạnh</h2>
+            <h2 class="text-3xl font-bold text-emerald-800 mb-8 text-center">Bốn Mùa Đức Hạnh</h2>
             <p class="text-center text-lg text-stone-600 mb-10">Chủ nghĩa Khắc Kỷ không chỉ là lý thuyết suông mà là một nghệ thuật sống được thực hành hàng ngày. Ứng dụng này sẽ dẫn dắt bạn qua bốn "mùa" tượng trưng cho bốn đức hạnh cốt lõi, giúp bạn vun trồng chúng trong từng khía cạnh của cuộc đời. Hãy chọn một mùa để bắt đầu hành trình khám phá và thực hành.</p>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div class="seasonal-card bg-spring-bg p-6 rounded-lg shadow-lg border-l-4 spring-accent cursor-pointer" onclick="showVirtue('mua-xuan')">
@@ -158,7 +168,7 @@
                     <p class="text-sm text-stone-700">Nuôi dưỡng sức mạnh đối mặt thử thách, hành động quyết liệt và sống đúng giá trị.</p>
                 </div>
                 <div class="seasonal-card bg-autumn-bg p-6 rounded-lg shadow-lg border-l-4 autumn-accent cursor-pointer" onclick="showVirtue('mua-thu')">
-                    <h3 class="text-2xl font-semibold autumn-text mb-3">🍂 Mùa Thu - Công Bằng</h3>
+                    <h3 class="text-2xl font-semibold autumn-text mb-3">� Mùa Thu - Công Bằng</h3>
                     <p class="text-sm text-stone-700">Gặt hái thành quả, chia sẻ và đối xử đúng mực với bản thân và người khác.</p>
                 </div>
                 <div class="seasonal-card bg-winter-bg p-6 rounded-lg shadow-lg border-l-4 winter-accent cursor-pointer" onclick="showVirtue('mua-dong')">
@@ -192,7 +202,7 @@
                     </div>
                     <div id="mua-xuan-moi-quan-he" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Trí Tuệ trong Mối Quan Hệ</h4>
-                        <p class="mb-2">Thấu hiểu bản chất của các mối quan hệ: sự cho và nhận, chấp nhận sự không hoàn hảo. Giao tiếp khôn ngoan: Lắng nghe, nói sự thật một cách xây dựng. Đặt kỳ vọng thực tế vào người khác.</p>
+                        <p class="mb-2">Thấu hiểu bản chất của cĂ¡c má»‘i quan há»‡: sá»± cho vĂ  nháº­n, cháº¥p nháº­n sá»± khĂ´ng hoĂ n háº£o. Giao tiáº¿p khĂ´n ngoan: Láº¯ng nghe, nĂ³i sá»± tháº­t má»™t cĂ¡ch xĂ¢y dá»±ng. Äáº·t ká»³ vá»ng thá»±c táº¿ vĂ o ngÆ°á»i khĂ¡c.</p>
                         <button onclick="toggleExercise('ex-xuan-mqh')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-xuan-mqh" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Phân tích một mối quan hệ qua lăng kính "điều tôi kiểm soát được":</h5>
@@ -201,7 +211,7 @@
                     </div>
                     <div id="mua-xuan-phat-trien-ban-than" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Trí Tuệ trong Phát Triển Bản Thân</h4>
-                        <p class="mb-2">Tự nhận thức: Hiểu rõ điểm mạnh, điểm yếu, giá trị cốt lõi của bản thân. Học hỏi suốt đời: Thái độ cởi mở với kiến thức mới, nhìn nhận sai lầm như bài học. Chăm sóc sức khỏe dựa trên hiểu biết, không chạy theo trào lưu.</p>
+                        <p class="mb-2">Tá»± nháº­n thá»©c: Hiá»ƒu rĂµ Ä‘iá»ƒm máº¡nh, Ä‘iá»ƒm yáº¿u, giĂ¡ trá»‹ cá»‘t lĂµi cá»§a báº£n thĂ¢n. Há»c há»i suá»‘t Ä‘á»i: ThĂ¡i Ä‘á»™ cá»Ÿi má»Ÿ vá»›i kiáº¿n thá»©c má»›i, nhĂ¬n nháº­n sai láº§m nhÆ° bĂ i há»c. ChÄƒm sĂ³c sá»©c khá»e dá»±a trĂªn hiá»ƒu biáº¿t, khĂ´ng cháº¡y theo trĂ o lÆ°u.</p>
                         <button onclick="toggleExercise('ex-xuan-ptbt')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-xuan-ptbt" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Viết "Tuyên ngôn giá trị cá nhân":</h5>
@@ -210,7 +220,7 @@
                     </div>
                     <div id="mua-xuan-dong-gop" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Trí Tuệ trong Đóng Góp & Ý Nghĩa</h4>
-                        <p class="mb-2">Tìm hiểu xem đâu là nơi bạn có thể tạo ra giá trị thực sự. Lựa chọn các hoạt động đóng góp phù hợp với khả năng và đam mê. Tránh "chủ nghĩa anh hùng" ảo tưởng, tập trung vào những hành động nhỏ nhưng có ý nghĩa.</p>
+                        <p class="mb-2">TĂ¬m hiá»ƒu xem Ä‘Ă¢u lĂ  nÆ¡i báº¡n cĂ³ thá»ƒ táº¡o ra giĂ¡ trá»‹ thá»±c sá»±. Lá»±a chá»n cĂ¡c hoáº¡t Ä‘á»™ng Ä‘Ă³ng gĂ³p phĂ¹ há»£p vá»›i kháº£ nÄƒng vĂ  Ä‘am mĂª. TrĂ¡nh "chá»§ nghÄ©a anh hĂ¹ng" áº£o tÆ°á»Ÿng, táº­p trung vĂ o nhá»¯ng hĂ nh Ä‘á»™ng nhá» nhÆ°ng cĂ³ Ă½ nghÄ©a.</p>
                         <button onclick="toggleExercise('ex-xuan-dg')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-xuan-dg" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Xác định 3 cách nhỏ bạn có thể đóng góp cho cộng đồng ngay tuần này:</h5>
@@ -257,7 +267,7 @@
                     </div>
                     <div id="mua-ha-phat-trien-ban-than" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Can Đảm trong Phát Triển Bản Thân</h4>
-                        <p class="mb-2">Vượt qua vùng thoải mái để học kỹ năng mới, thử thách mới. Đối mặt với những khía cạnh chưa tốt của bản thân để cải thiện. Kiên trì với các mục tiêu sức khỏe dù gặp trở ngại.</p>
+                        <p class="mb-2">VÆ°á»£t qua vĂ¹ng thoáº£i mĂ¡i Ä‘á»ƒ há»c ká»¹ nÄƒng má»›i, thá»­ thĂ¡ch má»›i. Äá»‘i máº·t vá»›i nhá»¯ng khĂ­a cáº¡nh chÆ°a tá»‘t cá»§a báº£n thĂ¢n Ä‘á»ƒ cáº£i thiá»‡n. KiĂªn trĂ¬ vá»›i cĂ¡c má»¥c tiĂªu sá»©c khá»e dĂ¹ gáº·p trá»Ÿ ngáº¡i.</p>
                         <button onclick="toggleExercise('ex-ha-ptbt')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-ha-ptbt" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Cam kết một hành động nhỏ hàng ngày để bước ra khỏi vùng an toàn:</h5>
@@ -266,7 +276,7 @@
                     </div>
                     <div id="mua-ha-dong-gop" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Can Đảm trong Đóng Góp & Ý Nghĩa</h4>
-                        <p class="mb-2">Đứng lên vì những gì bạn tin là đúng, ngay cả khi gặp phải sự phản đối. Dấn thân vào những hoạt động cộng đồng đòi hỏi sự kiên trì và nỗ lực. Can đảm để khác biệt, để tạo ra thay đổi tích cực.</p>
+                        <p class="mb-2">Äá»©ng lĂªn vĂ¬ nhá»¯ng gĂ¬ báº¡n tin lĂ  Ä‘Ăºng, ngay cáº£ khi gáº·p pháº£i sá»± pháº£n Ä‘á»‘i. Dáº¥n thĂ¢n vĂ o nhá»¯ng hoáº¡t Ä‘á»™ng cá»™ng Ä‘á»“ng Ä‘Ă²i há»i sá»± kiĂªn trĂ¬ vĂ  ná»— lá»±c. Can Ä‘áº£m Ä‘á»ƒ khĂ¡c biá»‡t, Ä‘á»ƒ táº¡o ra thay Ä‘á»•i tĂ­ch cá»±c.</p>
                         <button onclick="toggleExercise('ex-ha-dg')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-ha-dg" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Xác định một vấn đề xã hội bạn quan tâm và một hành động can đảm bạn có thể thực hiện:</h5>
@@ -304,7 +314,7 @@
                     </div>
                     <div id="mua-thu-moi-quan-he" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Công Bằng trong Mối Quan Hệ</h4>
-                        <p class="mb-2">Tôn trọng quyền và nhu cầu của người khác. Giữ lời hứa, đáng tin cậy. Giải quyết mâu thuẫn dựa trên sự công bằng và tôn trọng lẫn nhau.</p>
+                        <p class="mb-2">TĂ´n trá»ng quyá»n vĂ  nhu cáº§u cá»§a ngÆ°á»i khĂ¡c. Giá»¯ lá»i há»©a, Ä‘Ă¡ng tin cáº­y. Giáº£i quyáº¿t mĂ¢u thuáº«n dá»±a trĂªn sá»± cĂ´ng báº±ng vĂ  tĂ´n trá»ng láº«n nhau.</p>
                         <button onclick="toggleExercise('ex-thu-mqh')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-thu-mqh" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Suy ngẫm về sự công bằng trong các mối quan hệ quan trọng của bạn:</h5>
@@ -313,7 +323,7 @@
                     </div>
                     <div id="mua-thu-ban-than" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Công Bằng với Bản Thân</h4>
-                        <p class="mb-2">Nhìn nhận bản thân một cách khách quan, không quá khắt khe hay tự hạ thấp. Dành thời gian chăm sóc nhu cầu của chính mình. Tha thứ cho những lỗi lầm của bản thân, xem đó là cơ hội học hỏi.</p>
+                        <p class="mb-2">NhĂ¬n nháº­n báº£n thĂ¢n má»™t cĂ¡ch khĂ¡ch quan, khĂ´ng quĂ¡ kháº¯t khe hay tá»± háº¡ tháº¥p. DĂ nh thá»i gian chÄƒm sĂ³c nhu cáº§u cá»§a chĂ­nh mĂ¬nh. Tha thá»© cho nhá»¯ng lá»—i láº§m cá»§a báº£n thĂ¢n, xem Ä‘Ă³ lĂ  cÆ¡ há»™i há»c há»i.</p>
                         <button onclick="toggleExercise('ex-thu-bt')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-thu-bt" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Viết một lá thư tử tế cho chính mình:</h5>
@@ -322,7 +332,7 @@
                     </div>
                     <div id="mua-thu-dong-gop" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Công Bằng trong Đóng Góp & Ý Nghĩa</h4>
-                        <p class="mb-2">Đảm bảo rằng những đóng góp của bạn là thiết thực và tôn trọng người nhận. Thúc đẩy sự công bằng và bình đẳng trong cộng đồng. Nhận thức về tác động của hành động cá nhân lên bức tranh lớn hơn.</p>
+                        <p class="mb-2">Äáº£m báº£o ráº±ng nhá»¯ng Ä‘Ă³ng gĂ³p cá»§a báº¡n lĂ  thiáº¿t thá»±c vĂ  tĂ´n trá»ng ngÆ°á»i nháº­n. ThĂºc Ä‘áº©y sá»± cĂ´ng báº±ng vĂ  bĂ¬nh Ä‘áº³ng trong cá»™ng Ä‘á»“ng. Nháº­n thá»©c vá» tĂ¡c Ä‘á»™ng cá»§a hĂ nh Ä‘á»™ng cĂ¡ nhĂ¢n lĂªn bá»©c tranh lá»›n hÆ¡n.</p>
                         <button onclick="toggleExercise('ex-thu-dg')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-thu-dg" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Tìm hiểu và ủng hộ một tổ chức hoạt động vì công bằng xã hội:</h5>
@@ -351,7 +361,7 @@
 
                     <div id="mua-dong-su-nghiep" class="aspect-content active">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Tiết Độ trong Sự Nghiệp & Tài Chính</h4>
-                        <p class="mb-2">Tránh làm việc quá sức, cân bằng giữa công việc và cuộc sống. Chi tiêu có ý thức, tránh lãng phí và nợ nần không cần thiết. Tìm kiếm sự hài lòng trong công việc hiện tại, không ngừng chạy theo danh vọng ảo.</p>
+                        <p class="mb-2">TrĂ¡nh lĂ m viá»‡c quĂ¡ sá»©c, cĂ¢n báº±ng giá»¯a cĂ´ng viá»‡c vĂ  cuá»™c sá»‘ng. Chi tiĂªu cĂ³ Ă½ thá»©c, trĂ¡nh lĂ£ng phĂ­ vĂ  ná»£ náº§n khĂ´ng cáº§n thiáº¿t. TĂ¬m kiáº¿m sá»± hĂ i lĂ²ng trong cĂ´ng viá»‡c hiá»‡n táº¡i, khĂ´ng ngá»«ng cháº¡y theo danh vá»ng áº£o.</p>
                         <button onclick="toggleExercise('ex-dong-sntc')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-dong-sntc" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Đánh giá và đơn giản hóa chi tiêu cá nhân:</h5>
@@ -360,7 +370,7 @@
                     </div>
                     <div id="mua-dong-moi-quan-he" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Tiết Độ trong Mối Quan Hệ</h4>
-                        <p class="mb-2">Kiểm soát cảm xúc tiêu cực (giận dữ, ghen tuông), không để chúng phá hoại mối quan hệ. Tránh đòi hỏi quá nhiều từ người khác, tôn trọng không gian riêng của họ. Nuôi dưỡng sự bình yên và hài hòa trong các tương tác.</p>
+                        <p class="mb-2">Kiá»ƒm soĂ¡t cáº£m xĂºc tiĂªu cá»±c (giáº­n dá»¯, ghen tuĂ´ng), khĂ´ng Ä‘á»ƒ chĂºng phĂ¡ hoáº¡i má»‘i quan há»‡. TrĂ¡nh Ä‘Ă²i há»i quĂ¡ nhiá»u tá»« ngÆ°á»i khĂ¡c, tĂ´n trá»ng khĂ´ng gian riĂªng cá»§a há». NuĂ´i dÆ°á»¡ng sá»± bĂ¬nh yĂªn vĂ  hĂ i hĂ²a trong cĂ¡c tÆ°Æ¡ng tĂ¡c.</p>
                         <button onclick="toggleExercise('ex-dong-mqh')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-dong-mqh" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Thực hành "tạm dừng" trước khi phản ứng trong một tình huống căng thẳng:</h5>
@@ -369,7 +379,7 @@
                     </div>
                     <div id="mua-dong-ban-than" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Tiết Độ với Bản Thân</h4>
-                        <p class="mb-2">Ăn uống, ngủ nghỉ điều độ. Hạn chế những thói quen không lành mạnh (ví dụ: sử dụng mạng xã hội quá nhiều). Tìm niềm vui trong những điều giản dị, thực hành chánh niệm.</p>
+                        <p class="mb-2">Ä‚n uá»‘ng, ngá»§ nghá»‰ Ä‘iá»u Ä‘á»™. Háº¡n cháº¿ nhá»¯ng thĂ³i quen khĂ´ng lĂ nh máº¡nh (vĂ­ dá»¥: sá»­ dá»¥ng máº¡ng xĂ£ há»™i quĂ¡ nhiá»u). TĂ¬m niá»m vui trong nhá»¯ng Ä‘iá»u giáº£n dá»‹, thá»±c hĂ nh chĂ¡nh niá»‡m.</p>
                         <button onclick="toggleExercise('ex-dong-bt')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-dong-bt" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">"Một ngày không phàn nàn" hoặc "Digital Detox" (cai nghiện kỹ thuật số):</h5>
@@ -378,7 +388,7 @@
                     </div>
                     <div id="mua-dong-dong-gop" class="aspect-content hidden">
                         <h4 class="text-xl font-semibold text-emerald-700 mb-3">Tiết Độ trong Đóng Góp & Ý Nghĩa</h4>
-                        <p class="mb-2">Tập trung vào một vài hoạt động đóng góp có ý nghĩa sâu sắc thay vì dàn trải. Biết khi nào nên nói "không" để bảo vệ năng lượng và sự tập trung. Hành động một cách bền vững, tránh "cháy hết mình" trong một thời gian ngắn.</p>
+                        <p class="mb-2">Táº­p trung vĂ o má»™t vĂ i hoáº¡t Ä‘á»™ng Ä‘Ă³ng gĂ³p cĂ³ Ă½ nghÄ©a sĂ¢u sáº¯c thay vĂ¬ dĂ n tráº£i. Biáº¿t khi nĂ o nĂªn nĂ³i "khĂ´ng" Ä‘á»ƒ báº£o vá»‡ nÄƒng lÆ°á»£ng vĂ  sá»± táº­p trung. HĂ nh Ä‘á»™ng má»™t cĂ¡ch bá»n vá»¯ng, trĂ¡nh "chĂ¡y háº¿t mĂ¬nh" trong má»™t thá»i gian ngáº¯n.</p>
                         <button onclick="toggleExercise('ex-dong-dg')" class="mt-2 mb-4 text-sm text-amber-600 hover:text-amber-700 font-semibold">Bài tập thực hành ▼</button>
                         <div id="ex-dong-dg" class="exercise-content bg-amber-50 p-4 rounded-md border border-amber-200">
                             <h5 class="font-semibold text-amber-700 mb-2">Rà soát các cam kết xã hội và chọn lựa những gì thực sự quan trọng:</h5>
@@ -396,19 +406,19 @@
 
         <section id="loi-ket" class="content-section pt-16 -mt-16 mb-12">
              <div class="bg-white p-8 rounded-lg shadow-lg">
-                <h2 class="text-3xl font-bold text-emerald-700 mb-6">Lời Kết: Vòng Tròn Bốn Mùa Vĩnh Cửu</h2>
+                <h2 class="text-3xl font-bold text-emerald-800 mb-6">Lời Kết: Vòng Tròn Bốn Mùa Vĩnh Cửu</h2>
                 <p class="mb-4">Hành trình qua bốn mùa đức hạnh – Trí Tuệ, Can Đảm, Công Bằng và Tiết Độ – đã khép lại, nhưng đây không phải là điểm kết thúc, mà là một sự khởi đầu mới. Chủ nghĩa Khắc Kỷ không phải là một đích đến tĩnh tại, mà là một con đường, một nghệ thuật sống cần được rèn luyện và thực hành mỗi ngày, trọn đời.</p>
                 <p class="mb-4">Như vòng tuần hoàn của bốn mùa trong tự nhiên, các đức hạnh này cũng tương hỗ và nuôi dưỡng lẫn nhau. Trí tuệ soi đường cho can đảm hành động, can đảm bảo vệ công bằng, công bằng định hướng cho tiết độ, và tiết độ tạo không gian cho trí tuệ phát triển. Bằng cách ý thức vun trồng từng đức hạnh, chúng ta đang tạo ra một "mùa xuân" mới trong chính cuộc đời mình – một mùa xuân của sự tỉnh thức, sức mạnh nội tâm và bình an đích thực.</p>
                 <p class="mb-4">Hãy mang theo những nguyên tắc, bài học và bài tập thực hành này vào cuộc sống hàng ngày của bạn. Có thể sẽ có những lúc bạn vấp ngã, quên lãng, hoặc cảm thấy nản lòng. Đó là điều hoàn toàn tự nhiên. Điều quan trọng là hãy kiên nhẫn với bản thân, học hỏi từ những sai lầm, và luôn quay trở lại với con đường đã chọn.</p>
-                <p class="font-semibold text-emerald-600">Xin chúc bạn một hành trình đầy bình an, minh triết và một cuộc sống thực sự ý nghĩa, trọn vẹn theo tinh thần Khắc Kỷ.</p>
+                <p class="font-semibold text-emerald-700">Xin chúc bạn một hành trình đầy bình an, minh triết và một cuộc sống thực sự ý nghĩa, trọn vẹn theo tinh thần Khắc Kỷ.</p>
             </div>
         </section>
 
         <section id="phu-luc" class="content-section pt-16 -mt-16">
             <div class="bg-white p-8 rounded-lg shadow-lg">
-                <h2 class="text-3xl font-bold text-emerald-700 mb-6">Phụ Lục</h2>
+                <h2 class="text-3xl font-bold text-emerald-800 mb-6">Phụ Lục</h2>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-emerald-600 mb-3">Các Nhà Khắc Kỷ Nổi Tiếng (Giới thiệu ngắn gọn)</h3>
+                    <h3 class="text-xl font-semibold text-emerald-700 mb-3">Các Nhà Khắc Kỷ Nổi Tiếng (Giới thiệu ngắn gọn)</h3>
                     <ul class="list-disc list-inside space-y-2 pl-4">
                         <li><strong>Seneca (Lucius Annaeus Seneca):</strong> Nhà chính khách, nhà viết kịch, và triết gia La Mã. Các tác phẩm nổi tiếng của ông bao gồm "Moral Letters to Lucilius" (Những lá thư đạo đức gửi Lucilius), "On the Shortness of Life" (Về sự ngắn ngủi của cuộc đời). Ông nhấn mạnh tầm quan trọng của việc sống theo tự nhiên, kiểm soát cảm xúc và thực hành đức hạnh.</li>
                         <li><strong>Epictetus:</strong> Sinh ra là một nô lệ, sau này trở thành một triết gia Khắc Kỷ có ảnh hưởng lớn. Lời dạy của ông được học trò Arrian ghi lại trong "Discourses" (Bài giảng) và "Enchiridion" (Sổ tay). Ông tập trung vào sự khác biệt giữa những gì chúng ta kiểm soát được và những gì không, và tầm quan trọng của ý chí tự do.</li>
@@ -416,22 +426,22 @@
                     </ul>
                 </div>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold text-emerald-600 mb-3">Một Số Câu Trích Dẫn Hay Về Chủ Nghĩa Khắc Kỷ</h3>
-                    <blockquote class="border-l-4 border-emerald-500 pl-4 italic text-stone-600 mb-3">
+                    <h3 class="text-xl font-semibold text-emerald-700 mb-3">Một Số Câu Trích Dẫn Hay Về Chủ Nghĩa Khắc Kỷ</h3>
+                    <blockquote class="border-l-4 border-emerald-600 pl-4 italic text-stone-600 mb-3">
                         <p>"Chúng ta không đau khổ vì sự việc, mà vì cách chúng ta nhìn nhận sự việc." - Epictetus</p>
                     </blockquote>
-                    <blockquote class="border-l-4 border-emerald-500 pl-4 italic text-stone-600 mb-3">
+                    <blockquote class="border-l-4 border-emerald-600 pl-4 italic text-stone-600 mb-3">
                         <p>"Nếu bạn muốn cải thiện, hãy bằng lòng bị coi là ngu ngốc và khờ khạo." - Epictetus</p>
                     </blockquote>
-                     <blockquote class="border-l-4 border-emerald-500 pl-4 italic text-stone-600 mb-3">
+                     <blockquote class="border-l-4 border-emerald-600 pl-4 italic text-stone-600 mb-3">
                         <p>"Hạnh phúc của cuộc đời bạn phụ thuộc vào chất lượng của những suy nghĩ của bạn." - Marcus Aurelius</p>
                     </blockquote>
-                    <blockquote class="border-l-4 border-emerald-500 pl-4 italic text-stone-600 mb-3">
+                    <blockquote class="border-l-4 border-emerald-600 pl-4 italic text-stone-600 mb-3">
                         <p>"Khó khăn không phải là lý do để không dám làm, mà chính sự không dám làm mới là khó khăn." - Seneca (Diễn ý)</p>
                     </blockquote>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold text-emerald-600 mb-3">Tài Liệu Đọc Thêm (Gợi ý)</h3>
+                    <h3 class="text-xl font-semibold text-emerald-700 mb-3">Tài Liệu Đọc Thêm (Gợi ý)</h3>
                     <ul class="list-disc list-inside space-y-1 pl-4 text-sm">
                         <li>"A Guide to the Good Life: The Ancient Art of Stoic Joy" của William B. Irvine</li>
                         <li>"How to Be a Stoic: Using Ancient Philosophy to Live a Modern Life" của Massimo Pigliucci</li>
